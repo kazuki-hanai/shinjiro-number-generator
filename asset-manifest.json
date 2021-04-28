@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.457adf75.chunk.css",
-    "main.js": "/static/js/main.f67e3cc0.chunk.js",
-    "main.js.map": "/static/js/main.f67e3cc0.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.1b78f6fc.js",
-    "runtime-main.js.map": "/static/js/runtime-main.1b78f6fc.js.map",
-    "static/js/2.c9004191.chunk.js": "/static/js/2.c9004191.chunk.js",
-    "static/js/2.c9004191.chunk.js.map": "/static/js/2.c9004191.chunk.js.map",
-    "static/js/3.aabe852d.chunk.js": "/static/js/3.aabe852d.chunk.js",
-    "static/js/3.aabe852d.chunk.js.map": "/static/js/3.aabe852d.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.457adf75.chunk.css.map": "/static/css/main.457adf75.chunk.css.map",
-    "static/js/2.c9004191.chunk.js.LICENSE.txt": "/static/js/2.c9004191.chunk.js.LICENSE.txt"
+    "main.css": "/shinjiro-number-generator/static/css/main.457adf75.chunk.css",
+    "main.js": "/shinjiro-number-generator/static/js/main.f67e3cc0.chunk.js",
+    "main.js.map": "/shinjiro-number-generator/static/js/main.f67e3cc0.chunk.js.map",
+    "runtime-main.js": "/shinjiro-number-generator/static/js/runtime-main.23811b90.js",
+    "runtime-main.js.map": "/shinjiro-number-generator/static/js/runtime-main.23811b90.js.map",
+    "static/js/2.c9004191.chunk.js": "/shinjiro-number-generator/static/js/2.c9004191.chunk.js",
+    "static/js/2.c9004191.chunk.js.map": "/shinjiro-number-generator/static/js/2.c9004191.chunk.js.map",
+    "static/js/3.aabe852d.chunk.js": "/shinjiro-number-generator/static/js/3.aabe852d.chunk.js",
+    "static/js/3.aabe852d.chunk.js.map": "/shinjiro-number-generator/static/js/3.aabe852d.chunk.js.map",
+    "index.html": "/shinjiro-number-generator/index.html",
+    "static/css/main.457adf75.chunk.css.map": "/shinjiro-number-generator/static/css/main.457adf75.chunk.css.map",
+    "static/js/2.c9004191.chunk.js.LICENSE.txt": "/shinjiro-number-generator/static/js/2.c9004191.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1b78f6fc.js",
+    "static/js/runtime-main.23811b90.js",
     "static/js/2.c9004191.chunk.js",
     "static/css/main.457adf75.chunk.css",
     "static/js/main.f67e3cc0.chunk.js"
