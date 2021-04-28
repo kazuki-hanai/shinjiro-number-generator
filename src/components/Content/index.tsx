@@ -65,15 +65,12 @@ const Content = () => {
         setShinjiroNumber(num);
     };
 
-    const handleDownload = () => {
+    const handleDownload = (e: any) => {
         if (canvas !== null) {
             const base64 = canvas.toDataURL('image/png');
-            const downloadElement: any = document.getElementById('download');
-            if (downloadElement === null) {
-                console.log('download element is null');
-                return;
-            }
-            downloadElement.href = base64;
+            const a = e.target;
+            a.href = base64;
+            a.download = new Date().getTime() + '.png';
         }
     };
 
@@ -125,14 +122,13 @@ const Content = () => {
                 onChange={handleNumberChange}
             ></input>
             <div className="w-full flex justify-center p-8">
-                <button
-                    className="inline-block text-sm px-20 py-6 leading-none border rounded text-accentsub border-accentsub hover:border-accentsubhov hover:text-accentsubhov mt-4 lg:mt-0"
+                <a
+                    className="cursor-pointer inline-block text-sm px-20 py-6 leading-none border rounded text-accentsub border-accentsub hover:border-accentsubhov hover:text-accentsubhov mt-4 lg:mt-0"
                     onClick={handleDownload}
+                    download=""
                 >
-                    <a id="download" href="#" download="shinjiro.png">
-                        画像をダウンロード
-                    </a>
-                </button>
+                    画像をダウンロード
+                </a>
             </div>
         </div>
     );
