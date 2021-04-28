@@ -4,7 +4,7 @@ import Header from './components/Header';
 
 function App() {
     return (
-        <div className="bg-main flex flex-col items-center justify-center w-50 h-screen">
+        <div className="bg-main flex flex-col items-center justify-center h-full">
             <Header />
             <Content />
             <Footer />
