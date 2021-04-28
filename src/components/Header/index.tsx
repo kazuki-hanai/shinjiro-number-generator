@@ -8,10 +8,10 @@ const Header = () => {
                 <a
                     target="_blank"
                     rel="noreferrer"
-                    href="https://github.com/wan-nyan-wan"
+                    href="https://github.com/wan-nyan-wan/shinjiro-number-generator"
                     className="inline-block text-sm px-4 py-2 leading-none border rounded text-accentsub border-accentsub hover:border-accentsubhov hover:text-accentsubhov mt-4 lg:mt-0"
                 >
-                    作成者のgithubページ
+                    Github Repository
                 </a>
             </div>
         </div>
