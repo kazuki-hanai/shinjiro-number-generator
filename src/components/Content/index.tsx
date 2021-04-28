@@ -86,7 +86,9 @@ const Content = () => {
         const img = new Image();
         setImg(img);
         setCanvas(canvas);
-        img.src = 'shinjiro.png';
+        if (window.location.host === 'localhost:3000')
+            img.src = 'shinjiro-number-generator/shinjiro.png';
+        else img.src = 'shinjiro.png';
         img.onload = () => {
             const windowWidth = document.body.clientWidth;
             const imgWidth = img.width;
@@ -96,7 +98,7 @@ const Content = () => {
 
             if (windowWidth < imgWidth) {
                 console.log(windowWidth, imgWidth);
-                const scale = 0.9;
+                const scale = 0.95;
                 width = windowWidth * scale;
                 height = img.height * (windowWidth / imgWidth) * scale;
                 fontSize = fontSize * (windowWidth / imgWidth) * scale;
