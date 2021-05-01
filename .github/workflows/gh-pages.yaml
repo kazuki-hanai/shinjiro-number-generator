@@ -7,21 +7,18 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.0
         with:
-          hugo-version: '0.79.1'
-
+          node-version: "14.x"
       - name: Build
-        run: hugo --minify
-
+        run: npm install && npm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
