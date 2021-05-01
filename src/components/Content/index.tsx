@@ -51,6 +51,9 @@ const Content = () => {
             ctx.fillText(line2, x2 + fontSize * shinjiroNumber.length, y2);
             ctx.fillStyle = '#C77552';
             ctx.fillText(shinjiroNumber, x2, y2);
+
+            const targetImg: any = document.getElementById('shinjiro-img');
+            targetImg.src = canvas.toDataURL('image/png');
         }
     };
 
@@ -115,7 +118,8 @@ const Content = () => {
     }, [loaded, shinjiroNumber]);
     return (
         <div className="">
-            <canvas id="generator-canvas"></canvas>
+            <canvas id="generator-canvas" className="hidden"></canvas>
+            <img id="shinjiro-img" className="" alt="進次郎の画像" />
             <input
                 placeholder="数字を入力してね"
                 className="w-full text-center p-10 focus:outline-none"
