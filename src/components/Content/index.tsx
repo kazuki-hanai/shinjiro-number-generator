@@ -8,55 +8,6 @@ const Content = () => {
     const [loaded, setLoaded] = useState(false);
     const [shinjiroNumber, setShinjiroNumber] = useState('４６');
 
-    const getCanvasContext = (fontsize: number, color: string) => {
-        const ctx = canvas.getContext('2d');
-        ctx.font = `bold ${fontsize}px serif`;
-        ctx.shadowColor = '#000';
-        ctx.shadowOffsetX = 2;
-        ctx.shadowOffsetY = 1;
-        ctx.shadowBlur = 3;
-        ctx.fillStyle = color;
-        ctx.textBaseline = 'center';
-        ctx.textAlign = 'left';
-        return ctx;
-    };
-
-    const drawText = (shinjiroNumber: string) => {
-        const line1 = 'おぼろげながら浮かんできたんです';
-        const line2 = `という数字が`;
-        if (
-            img !== null &&
-            canvas !== null &&
-            canvasSize !== null &&
-            fontSize !== null
-        ) {
-            const ctx = getCanvasContext(fontSize, '#e5e5e5');
-            const x1 = (canvas.width / 100) * 20;
-            const y1 = (canvas.height / 100) * 88;
-            const x2 = (canvas.width / 100) * 20;
-            const y2 = (canvas.height / 100) * 95;
-
-            ctx.drawImage(
-                img,
-                0,
-                0,
-                img.width,
-                img.height,
-                0,
-                0,
-                canvasSize[0],
-                canvasSize[1]
-            );
-            ctx.fillText(line1, x1, y1);
-            ctx.fillText(line2, x2 + fontSize * shinjiroNumber.length, y2);
-            ctx.fillStyle = '#C77552';
-            ctx.fillText(shinjiroNumber, x2, y2);
-
-            const targetImg: any = document.getElementById('shinjiro-img');
-            targetImg.src = canvas.toDataURL('image/png');
-        }
-    };
-
     const handleNumberChange = (event: { target: { value: any } }) => {
         const toFullWidth = (value: string) => {
             if (!value) return value;
@@ -112,10 +63,60 @@ const Content = () => {
         };
     }, []);
     useEffect(() => {
+        const getCanvasContext = (fontsize: number, color: string) => {
+            const ctx = canvas.getContext('2d');
+            ctx.font = `bold ${fontsize}px serif`;
+            ctx.shadowColor = '#000';
+            ctx.shadowOffsetX = 2;
+            ctx.shadowOffsetY = 1;
+            ctx.shadowBlur = 3;
+            ctx.fillStyle = color;
+            ctx.textBaseline = 'center';
+            ctx.textAlign = 'left';
+            return ctx;
+        };
+        const drawText = (shinjiroNumber: string) => {
+            const line1 = 'おぼろげながら浮かんできたんです';
+            const line2 = `という数字が`;
+            if (
+                img !== null &&
+                canvas !== null &&
+                canvasSize !== null &&
+                fontSize !== null
+            ) {
+                const ctx = getCanvasContext(fontSize, '#e5e5e5');
+                const x1 = (canvas.width / 100) * 20;
+                const y1 = (canvas.height / 100) * 88;
+                const x2 = (canvas.width / 100) * 20;
+                const y2 = (canvas.height / 100) * 95;
+
+                ctx.drawImage(
+                    img,
+                    0,
+                    0,
+                    img.width,
+                    img.height,
+                    0,
+                    0,
+                    canvasSize[0],
+                    canvasSize[1]
+                );
+                ctx.fillText(line1, x1, y1);
+                ctx.fillText(line2, x2 + fontSize * shinjiroNumber.length, y2);
+                ctx.fillStyle = '#C77552';
+                ctx.fillText(shinjiroNumber, x2, y2);
+
+                const targetImg: any = document.getElementById('shinjiro-img');
+                targetImg.src = canvas.toDataURL('image/png');
+                targetImg.width = canvas.width;
+                targetImg.height = canvas.height;
+            }
+        };
         if (loaded) {
             drawText(shinjiroNumber);
         }
-    }, [loaded, shinjiroNumber]);
+    }, [loaded, shinjiroNumber, canvas, img, canvasSize, fontSize]);
+
     return (
         <div className="">
             <canvas id="generator-canvas" className="hidden"></canvas>
@@ -127,6 +128,7 @@ const Content = () => {
             ></input>
             <div className="w-full flex justify-center p-8">
                 <a
+                    href="/"
                     className="cursor-pointer inline-block text-sm px-20 py-6 leading-none border rounded text-accentsub border-accentsub hover:border-accentsubhov hover:text-accentsubhov mt-4 lg:mt-0"
                     onClick={handleDownload}
                     download=""
