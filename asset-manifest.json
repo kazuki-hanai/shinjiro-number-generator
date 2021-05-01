@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/shinjiro-number-generator/static/css/main.14642177.chunk.css",
-    "main.js": "/shinjiro-number-generator/static/js/main.0eac6a1f.chunk.js",
-    "main.js.map": "/shinjiro-number-generator/static/js/main.0eac6a1f.chunk.js.map",
+    "main.css": "/shinjiro-number-generator/static/css/main.d68acca2.chunk.css",
+    "main.js": "/shinjiro-number-generator/static/js/main.54cd2bed.chunk.js",
+    "main.js.map": "/shinjiro-number-generator/static/js/main.54cd2bed.chunk.js.map",
     "runtime-main.js": "/shinjiro-number-generator/static/js/runtime-main.23811b90.js",
     "runtime-main.js.map": "/shinjiro-number-generator/static/js/runtime-main.23811b90.js.map",
     "static/js/2.c9004191.chunk.js": "/shinjiro-number-generator/static/js/2.c9004191.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.aabe852d.chunk.js": "/shinjiro-number-generator/static/js/3.aabe852d.chunk.js",
     "static/js/3.aabe852d.chunk.js.map": "/shinjiro-number-generator/static/js/3.aabe852d.chunk.js.map",
     "index.html": "/shinjiro-number-generator/index.html",
-    "static/css/main.14642177.chunk.css.map": "/shinjiro-number-generator/static/css/main.14642177.chunk.css.map",
+    "static/css/main.d68acca2.chunk.css.map": "/shinjiro-number-generator/static/css/main.d68acca2.chunk.css.map",
     "static/js/2.c9004191.chunk.js.LICENSE.txt": "/shinjiro-number-generator/static/js/2.c9004191.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.23811b90.js",
     "static/js/2.c9004191.chunk.js",
-    "static/css/main.14642177.chunk.css",
-    "static/js/main.0eac6a1f.chunk.js"
+    "static/css/main.d68acca2.chunk.css",
+    "static/js/main.54cd2bed.chunk.js"
   ]
 }
